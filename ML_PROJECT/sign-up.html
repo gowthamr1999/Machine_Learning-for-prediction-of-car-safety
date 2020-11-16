@@ -1,0 +1,76 @@
+{% extends "layout1.html" %}
+{% block title %}Details{% endblock %}
+
+{% block main %}
+
+<div class="container">
+	<h1 class="text-success">Predict your Safety </h1>
+      <hr>
+      <p class="text-muted">Based on your inputs we predict your car safety</p>
+  <div class="row">
+    <div class="col">
+      <form action="/sign-up" method="POST">
+        <fieldset>
+      	<div class="jumbotron">
+        <div class="form-group">
+          <label>Buying</label>
+        <select id="cars" name="buy"  required>
+          <option value="3">Very High</option>
+          <option value="0">High</option>
+          <option value="2">Medium</option>
+          <option value="1">Low</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+          <label>Maintaince</label>
+          <select id="cars" name="maintain" required>
+          <option value="3">Very High</option>
+          <option value="0">High</option>
+          <option value="2">Medium</option>
+          <option value="1">Low</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Doors</label>
+          <select id="cars" name="door" required>
+          <option value="0">2 doors</option>
+          <option value="1">3 doors</option>
+          <option value="2">4 doors</option>
+          <option value="3">5 doors</option>
+          <option value="4">more</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Persons</label>
+          <select id="cars" name="person"  required>
+          <option value="0">2</option>
+          <option value="1">4</option>
+          <option value="2">more</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Boot space</label>
+          <select id="cars" name="boot"  required>
+          <option value="2">small</option>
+          <option value="1">medium</option>
+          <option value="0">big</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Safety</label>
+          <select id="cars" name="safe" required>
+          <option value="1">low</option>
+          <option value="2">medium</option>
+          <option value="0">high</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" autofocus>Submit</button>
+      </div>
+      </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
